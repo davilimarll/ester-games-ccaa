@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["CCAA", "Ester Games", "Inglês", "Jogos Educativos", "Aprendizado", "Professor Breno"],
   authors: [{ name: "Professor Breno Vitoriano" }],
   icons: {
-    icon: "/ccaa-logo.gif",
+    icon: "/ccaa-logo.svg",
   },
   openGraph: {
     title: "Ester Games - CCAA",

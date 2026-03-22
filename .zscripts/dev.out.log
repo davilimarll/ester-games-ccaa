@@ -211,3 +211,13 @@ Use 'kill 658' to stop it.
 ⚠ Cross origin request detected from preview-chat-48429eff-c14d-4f70-ba85-8248b7aa3596.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
  GET / 200 in 91ms (compile: 2ms, render: 88ms)
+ GET / 200 in 46ms (compile: 2ms, render: 43ms)
+ GET / 200 in 28ms (compile: 1581µs, render: 26ms)
+ GET / 200 in 31ms (compile: 2ms, render: 29ms)
+ GET / 200 in 45ms (compile: 11ms, render: 33ms)
+ GET / 200 in 25ms (compile: 2ms, render: 23ms)
+✓ Compiled in 192ms
+✓ Compiled in 123ms
+ GET / 200 in 86ms (compile: 48ms, render: 38ms)
+ GET / 200 in 12ms (compile: 1656µs, render: 10ms)
+ GET / 200 in 89ms (compile: 1821µs, render: 87ms)
