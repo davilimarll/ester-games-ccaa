@@ -8,6 +8,7 @@ import { EasterEggs } from '@/components/layout/EasterEggs'
 import { HomePage } from '@/components/pages/HomePage'
 import { GamesList } from '@/components/games/GamesList'
 import { GameView } from '@/components/games/GameView'
+import { EasterQuiz } from '@/components/games/EasterQuiz'
 import { games } from '@/data/games'
 import { PageView } from '@/types/games'
 
@@ -23,6 +24,12 @@ export default function Home() {
   }
 
   const handleSelectGame = (gameId: number) => {
+    // Quiz especial (ID 99)
+    if (gameId === 99) {
+      setCurrentPage('quiz')
+      return
+    }
+
     setSelectedGameId(gameId)
     setCurrentPage('game')
   }
@@ -41,6 +48,7 @@ export default function Home() {
       {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
       {currentPage === 'games' && <GamesList onNavigate={handleNavigate} onSelectGame={handleSelectGame} />}
       {currentPage === 'game' && selectedGame && <GameView game={selectedGame} onNavigate={handleNavigate} />}
+      {currentPage === 'quiz' && <EasterQuiz onBack={() => handleNavigate('games')} />}
 
       {/* Easter Banner */}
       <EasterBanner />

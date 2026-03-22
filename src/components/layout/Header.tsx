@@ -43,10 +43,10 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               Início
             </Button>
             <Button
-              variant={currentPage === 'games' || currentPage === 'game' ? 'default' : 'ghost'}
+              variant={currentPage === 'games' || currentPage === 'game' || currentPage === 'quiz' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => onNavigate('games')}
-              className={currentPage === 'games' || currentPage === 'game' ? 'bg-blue-700 hover:bg-blue-800' : 'text-slate-600'}
+              className={currentPage === 'games' || currentPage === 'game' || currentPage === 'quiz' ? 'bg-blue-700 hover:bg-blue-800' : 'text-slate-600'}
             >
               <Gamepad className="h-4 w-4 mr-1" />
               Jogos

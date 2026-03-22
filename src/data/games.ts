@@ -2,6 +2,19 @@ import { Game } from '@/types/games'
 
 export const games: Game[] = [
   {
+    id: 99,
+    title: "Desafio de Páscoa",
+    description: "Quiz exclusivo com 20 questões sobre vocabulário de Páscoa em inglês. Teste seus conhecimentos!",
+    iframe: "",
+    wordwallUrl: "",
+    width: 0,
+    height: 0,
+    category: "Quiz Especial",
+    difficulty: "Iniciante",
+    emoji: "🐰",
+    isQuiz: true
+  },
+  {
     id: 1,
     title: "Board Game - Easter Vocabulary",
     description: "Jogo de tabuleiro com vocabulário de Páscoa em inglês. Clique e aprenda palavras divertidas!",

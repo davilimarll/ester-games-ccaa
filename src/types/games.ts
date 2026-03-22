@@ -9,6 +9,7 @@ export type Game = {
   category: string
   difficulty: string
   emoji: string
+  isQuiz?: boolean  // Para o quiz especial
 }
 
-export type PageView = 'home' | 'games' | 'game'
+export type PageView = 'home' | 'games' | 'game' | 'quiz'
