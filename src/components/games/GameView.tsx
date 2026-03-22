@@ -38,7 +38,7 @@ export function GameView({ game, onNavigate }: GameViewProps) {
       </Button>
 
       {/* Game Card */}
-      <Card className="max-w-3xl mx-auto border-2 border-blue-200 shadow-xl overflow-hidden">
+      <Card className="max-w-4xl mx-auto border-2 border-blue-200 shadow-xl overflow-hidden">
         <CardHeader className="bg-gradient-to-r from-blue-700 to-blue-800 text-white pb-3">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-3">
@@ -63,17 +63,15 @@ export function GameView({ game, onNavigate }: GameViewProps) {
         <CardContent className="p-0">
           {/* Game Iframe */}
           <div className="w-full flex justify-center bg-gradient-to-b from-slate-50 to-white p-4">
-            <div className="w-full max-w-[500px]">
-              <iframe
-                src={game.iframe}
-                width="100%"
-                height={game.height}
-                frameBorder="0"
-                allowFullScreen
-                className="rounded-lg shadow-lg border border-slate-200"
-                style={{ maxWidth: '100%' }}
-              />
-            </div>
+            <iframe
+              src={game.iframe}
+              width="100%"
+              height={game.height}
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg shadow-lg border border-slate-200"
+              style={{ maxWidth: `${game.width}px`, width: '100%' }}
+            />
           </div>
         </CardContent>
       </Card>

@@ -24,5 +24,17 @@ export const games: Game[] = [
     category: "Quiz",
     difficulty: "Iniciante",
     emoji: "🐣"
+  },
+  {
+    id: 3,
+    title: "Crossword Puzzle",
+    description: "Palavras cruzadas com vocabulário de Páscoa. Complete o puzzle e aprenda novas palavras!",
+    iframe: "https://www.educaplay.com/game/8927538-vocabulary_easter_day.html",
+    wordwallUrl: "https://www.educaplay.com/game/8927538-vocabulary_easter_day.html",
+    width: 795,
+    height: 690,
+    category: "Vocabulário",
+    difficulty: "Intermediário",
+    emoji: "✏️"
   }
 ]
