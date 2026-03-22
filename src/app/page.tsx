@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { EasterBanner } from '@/components/layout/EasterBanner'
 import { EasterEggs } from '@/components/layout/EasterEggs'
+import { FloatingElements } from '@/components/layout/FloatingElements'
 import { HomePage } from '@/components/pages/HomePage'
 import { GamesList } from '@/components/games/GamesList'
 import { GameView } from '@/components/games/GameView'
@@ -24,31 +26,48 @@ export default function Home() {
   }
 
   const handleSelectGame = (gameId: number) => {
-    // Quiz especial (ID 99)
     if (gameId === 99) {
       setCurrentPage('quiz')
       return
     }
-
     setSelectedGameId(gameId)
     setCurrentPage('game')
   }
 
   const selectedGame = games.find(g => g.id === selectedGameId)
 
+  const pageVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 }
+  }
+
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-blue-50 to-white relative">
-      {/* Easter decoration - only on home */}
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden">
+      {/* Animated decorations */}
       {currentPage === 'home' && <EasterEggs />}
+      <FloatingElements />
 
       {/* Header */}
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
 
-      {/* Page Content */}
-      {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
-      {currentPage === 'games' && <GamesList onNavigate={handleNavigate} onSelectGame={handleSelectGame} />}
-      {currentPage === 'game' && selectedGame && <GameView game={selectedGame} onNavigate={handleNavigate} />}
-      {currentPage === 'quiz' && <EasterQuiz onBack={() => handleNavigate('games')} />}
+      {/* Page Content with animations */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentPage + (selectedGameId || '')}
+          variants={pageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.3 }}
+          className="flex-1 flex flex-col"
+        >
+          {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
+          {currentPage === 'games' && <GamesList onNavigate={handleNavigate} onSelectGame={handleSelectGame} />}
+          {currentPage === 'game' && selectedGame && <GameView game={selectedGame} onNavigate={handleNavigate} />}
+          {currentPage === 'quiz' && <EasterQuiz onBack={() => handleNavigate('games')} />}
+        </motion.div>
+      </AnimatePresence>
 
       {/* Easter Banner */}
       <EasterBanner />
