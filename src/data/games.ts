@@ -24,18 +24,5 @@ export const games: Game[] = [
     category: "Quiz",
     difficulty: "Iniciante",
     emoji: "🐣"
-  },
-  {
-    id: 3,
-    title: "Easter Bubble",
-    description: "Um divertido jogo de bolhas com tema de Páscoa! Combine as bolhas coloridas e se divirta!",
-    iframe: "",
-    wordwallUrl: "https://pt.y8.com/games/easter_bubble",
-    width: 500,
-    height: 380,
-    category: "Diversão",
-    difficulty: "Iniciante",
-    emoji: "🫧",
-    isExternal: true
   }
 ]
