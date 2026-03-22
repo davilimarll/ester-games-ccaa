@@ -14,12 +14,12 @@ export function Footer() {
             <div className="h-8 w-px bg-blue-700" />
             <div className="flex items-center gap-2">
               <Gamepad2 className="h-5 w-5 text-red-400" />
-              <span className="font-semibold">Ester Games</span>
+              <span className="font-semibold">Easter Games</span>
             </div>
           </div>
           <div className="text-center md:text-right">
             <p className="text-sm text-blue-200">
-              Desenvolvido por <span className="text-white font-medium">Professor Breno Vitoriano</span>
+              Desenvolvido por <span className="text-white font-medium">Teacher Breno Vitoriano</span>
             </p>
             <p className="text-xs text-blue-300 mt-1">
               CCAA - Centro de Cultura Anglo Americana

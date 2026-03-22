@@ -27,7 +27,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="hidden sm:flex items-center gap-2">
             <Gamepad2 className="h-6 w-6 text-red-600" />
             <span className="text-xl font-bold text-blue-800">
-              Ester Games
+              Easter Games
             </span>
           </div>
         </button>

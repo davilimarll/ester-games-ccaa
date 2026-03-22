@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ester Games - CCAA | Professor Breno Vitoriano",
-  description: "Plataforma de jogos educativos para aprendizado de inglês do CCAA. Desenvolvida pelo Professor Breno Vitoriano.",
-  keywords: ["CCAA", "Ester Games", "Inglês", "Jogos Educativos", "Aprendizado", "Professor Breno"],
-  authors: [{ name: "Professor Breno Vitoriano" }],
+  title: "Easter Games - CCAA | Teacher Breno Vitoriano",
+  description: "Plataforma de jogos educativos para aprendizado de inglês do CCAA. Desenvolvida pelo Teacher Breno Vitoriano.",
+  keywords: ["CCAA", "Easter Games", "Inglês", "Jogos Educativos", "Aprendizado", "Teacher Breno"],
+  authors: [{ name: "Teacher Breno Vitoriano" }],
   icons: {
     icon: "/ccaa-logo.svg",
   },
   openGraph: {
-    title: "Ester Games - CCAA",
+    title: "Easter Games - CCAA",
     description: "Jogos educativos para aprender inglês de forma divertida",
     type: "website",
   },
