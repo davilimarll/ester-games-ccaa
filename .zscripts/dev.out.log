@@ -238,3 +238,73 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 31ms (compile: 2ms, render: 29ms)
  GET / 200 in 35ms (compile: 2ms, render: 33ms)
 ✓ Compiled in 172ms
+⨯ ./src/app/page.tsx:396:25
+Ecmascript file had an error
+[0m [90m 394 |[39m
+ [90m 395 |[39m [90m// Main Component[39m
+[31m[1m>[22m[39m[90m 396 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 397 |[39m   [36mconst[39m [currentPage[33m,[39m setCurrentPage] [33m=[39m useState[33m<[39m[33mPageView[39m[33m>[39m([32m'home'[39m)
+ [90m 398 |[39m   [36mconst[39m [selectedGameId[33m,[39m setSelectedGameId] [33m=[39m useState[33m<[39m[33mnumber[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)
+ [90m 399 |[39m[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 931ms (compile: 800ms, render: 130ms)
+⨯ ./src/app/page.tsx:396:25
+Ecmascript file had an error
+[0m [90m 394 |[39m
+ [90m 395 |[39m [90m// Main Component[39m
+[31m[1m>[22m[39m[90m 396 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 397 |[39m   [36mconst[39m [currentPage[33m,[39m setCurrentPage] [33m=[39m useState[33m<[39m[33mPageView[39m[33m>[39m([32m'home'[39m)
+ [90m 398 |[39m   [36mconst[39m [selectedGameId[33m,[39m setSelectedGameId] [33m=[39m useState[33m<[39m[33mnumber[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)
+ [90m 399 |[39m[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 27ms (compile: 18ms, render: 8ms)
+⨯ ./src/app/page.tsx:396:25
+Ecmascript file had an error
+[0m [90m 394 |[39m
+ [90m 395 |[39m [90m// Main Component[39m
+[31m[1m>[22m[39m[90m 396 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 397 |[39m   [36mconst[39m [currentPage[33m,[39m setCurrentPage] [33m=[39m useState[33m<[39m[33mPageView[39m[33m>[39m([32m'home'[39m)
+ [90m 398 |[39m   [36mconst[39m [selectedGameId[33m,[39m setSelectedGameId] [33m=[39m useState[33m<[39m[33mnumber[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)
+ [90m 399 |[39m[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 25ms (compile: 16ms, render: 9ms)
+✓ Compiled in 168ms

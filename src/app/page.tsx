@@ -12,7 +12,7 @@ import {
   ExternalLink,
   ArrowLeft,
   ArrowRight,
-  Home,
+  Home as HomeIcon,
   Gamepad
 } from 'lucide-react'
 
@@ -90,7 +90,7 @@ function Header({ currentPage, onNavigate }: { currentPage: PageView; onNavigate
               onClick={() => onNavigate('home')}
               className={currentPage === 'home' ? 'bg-blue-700 hover:bg-blue-800' : 'text-slate-600'}
             >
-              <Home className="h-4 w-4 mr-1" />
+              <HomeIcon className="h-4 w-4 mr-1" />
               Início
             </Button>
             <Button 
