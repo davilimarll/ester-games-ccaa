@@ -1,20 +1,19 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/badge'
 import { Badge } from '@/components/ui/badge'
 import { 
   Gamepad2, 
-  Construction,
   Sparkles,
-  Mail
+  Play,
+  ExternalLink
 } from 'lucide-react'
 
 // Easter eggs decoration component
 function EasterEggs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Floating Easter eggs */}
       <div className="absolute top-20 left-[5%] animate-bounce" style={{ animationDuration: '3s' }}>
         <span className="text-3xl">🥚</span>
       </div>
@@ -36,6 +35,20 @@ function EasterEggs() {
     </div>
   )
 }
+
+// Game data
+const games = [
+  {
+    id: 1,
+    title: "Board Game - Easter Vocabulary",
+    description: "Jogo de tabuleiro com vocabulário de Páscoa em inglês",
+    iframe: "https://wordwall.net/pt/embed/aee7403d6d0e48858a3f78bc9a2b18ec?themeId=46&templateId=25&fontStackId=0",
+    width: 500,
+    height: 380,
+    category: "Vocabulário",
+    difficulty: "Iniciante"
+  }
+]
 
 export default function Home() {
   return (
@@ -70,7 +83,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 text-white py-12 md:py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 text-white py-10 md:py-12 relative overflow-hidden">
         {/* Easter decorations in hero */}
         <div className="absolute top-4 left-4 text-4xl animate-bounce opacity-50" style={{ animationDuration: '2s' }}>
           🐣
@@ -94,97 +107,94 @@ export default function Home() {
           {/* Easter Title */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-3xl md:text-4xl">🐰</span>
-            <h1 className="text-3xl md:text-5xl font-bold">
+            <h1 className="text-3xl md:text-4xl font-bold">
               Feliz Páscoa!
             </h1>
             <span className="text-3xl md:text-4xl">🐣</span>
           </div>
           
-          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-4">
-            Aprenda Inglês Jogando!
-          </p>
-          <p className="text-base md:text-lg text-blue-200 max-w-2xl mx-auto">
-            Jogos educativos desenvolvidos especialmente para os alunos do CCAA. 
-            Aprenda de forma divertida e eficaz!
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+            Aprenda inglês brincando! 🎮
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <main className="flex-1 container mx-auto px-4 py-8 md:py-12 relative z-10">
-        {/* Coming Soon Card */}
-        <Card className="max-w-2xl mx-auto border-2 border-blue-200 shadow-xl">
-          <CardHeader className="text-center pb-2">
-            <div className="mx-auto mb-4 flex items-center justify-center gap-3">
-              <span className="text-4xl">🥚</span>
-              <div className="p-4 bg-blue-100 rounded-full">
-                <Construction className="h-10 w-10 text-blue-700" />
-              </div>
-              <span className="text-4xl">🐰</span>
-            </div>
-            <CardTitle className="text-2xl md:text-3xl text-blue-800">
-              Em Construção
-            </CardTitle>
-            <CardDescription className="text-base mt-2">
-              Novos jogos estão sendo desenvolvidos. Em breve você poderá aprender inglês de forma divertida!
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center space-y-6">
-            <div className="flex items-center justify-center gap-2 text-slate-600">
-              <Sparkles className="h-5 w-5 text-red-600" />
-              <span>Aguarde as novidades</span>
-              <Sparkles className="h-5 w-5 text-red-600" />
-            </div>
-            
-            <div className="pt-4 border-t border-slate-100">
-              <p className="text-sm text-slate-500 mb-4">
-                Quer sugerir um jogo? Entre em contato com o Professor Breno!
-              </p>
-              <Button className="bg-blue-700 hover:bg-blue-800 text-white">
-                <Mail className="h-4 w-4 mr-2" />
-                Enviar Sugestão
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Main Content - Games */}
+      <main className="flex-1 container mx-auto px-4 py-8 md:py-10 relative z-10">
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <Play className="h-6 w-6 text-blue-700" />
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-800">
+            Jogos
+          </h2>
+          <Badge variant="secondary" className="ml-2">
+            {games.length} disponível
+          </Badge>
+        </div>
 
-        {/* Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
-          <Card className="text-center border-t-4 border-t-blue-600 hover:shadow-lg transition-shadow">
-            <CardHeader className="pb-2">
-              <div className="text-3xl mb-2">🥚</div>
-              <CardTitle className="text-lg text-blue-800">Vocabulário</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-slate-600">
-                Jogos para expandir seu vocabulário em inglês
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="text-center border-t-4 border-t-red-600 hover:shadow-lg transition-shadow">
-            <CardHeader className="pb-2">
-              <div className="text-3xl mb-2">🐰</div>
-              <CardTitle className="text-lg text-red-700">Gramática</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-slate-600">
-                Aprenda gramática de forma interativa
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="text-center border-t-4 border-t-blue-600 hover:shadow-lg transition-shadow">
-            <CardHeader className="pb-2">
-              <div className="text-3xl mb-2">🐣</div>
-              <CardTitle className="text-lg text-blue-800">Listening</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-slate-600">
-                Pratique sua compreensão auditiva
-              </p>
-            </CardContent>
-          </Card>
+        {/* Games Grid */}
+        <div className="max-w-3xl mx-auto space-y-6">
+          {games.map((game) => (
+            <Card key={game.id} className="border-2 border-blue-200 shadow-xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-blue-700 to-blue-800 text-white pb-3">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🥚</span>
+                    <CardTitle className="text-xl md:text-2xl">
+                      {game.title}
+                    </CardTitle>
+                  </div>
+                  <div className="flex gap-2">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      {game.category}
+                    </Badge>
+                    <Badge className="bg-red-600 text-white">
+                      {game.difficulty}
+                    </Badge>
+                  </div>
+                </div>
+                <CardDescription className="text-blue-100 mt-2">
+                  {game.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-0">
+                {/* Game Iframe */}
+                <div className="w-full flex justify-center bg-gradient-to-b from-slate-50 to-white p-4">
+                  <div className="w-full max-w-[500px]">
+                    <iframe 
+                      src={game.iframe}
+                      width="100%"
+                      height={game.height}
+                      frameBorder="0"
+                      allowFullScreen
+                      className="rounded-lg shadow-lg border border-slate-200"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </div>
+                </div>
+                {/* Open in new tab button */}
+                <div className="bg-slate-50 px-4 py-3 border-t border-slate-100 flex justify-center">
+                  <a 
+                    href="https://wordwall.net/pt/resource/aee7403d6d0e48858a3f78bc9a2b18ec"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 text-sm font-medium transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Abrir em tela cheia
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Coming Soon Info */}
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center gap-2 text-slate-600 bg-slate-100 px-4 py-2 rounded-full">
+            <Sparkles className="h-4 w-4 text-red-600" />
+            <span>Mais jogos em breve!</span>
+            <Sparkles className="h-4 w-4 text-red-600" />
+          </div>
         </div>
       </main>
 
