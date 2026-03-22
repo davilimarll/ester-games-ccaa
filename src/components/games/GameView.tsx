@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Play } from 'lucide-react'
 import { Game, PageView } from '@/types/games'
 
 interface GameViewProps {
@@ -61,20 +61,39 @@ export function GameView({ game, onNavigate }: GameViewProps) {
           </CardDescription>
         </CardHeader>
         <CardContent className="p-0">
-          {/* Game Iframe */}
-          <div className="w-full flex justify-center bg-gradient-to-b from-slate-50 to-white p-4">
-            <div className="w-full max-w-[500px]">
-              <iframe
-                src={game.iframe}
-                width="100%"
-                height={game.height}
-                frameBorder="0"
-                allowFullScreen
-                className="rounded-lg shadow-lg border border-slate-200"
-                style={{ maxWidth: '100%' }}
-              />
+          {game.isExternal ? (
+            /* External Game - Button to open in new tab */
+            <div className="w-full flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-white p-8 md:p-12">
+              <div className="text-6xl mb-6">{game.emoji}</div>
+              <p className="text-slate-600 text-center mb-6 max-w-md">
+                Este jogo será aberto em uma nova aba. Divirta-se!
+              </p>
+              <Button
+                size="lg"
+                className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6 shadow-xl"
+                onClick={() => window.open(game.wordwallUrl, '_blank')}
+              >
+                <Play className="h-6 w-6 mr-2" />
+                Jogar Agora
+                <ExternalLink className="h-5 w-5 ml-2" />
+              </Button>
             </div>
-          </div>
+          ) : (
+            /* Embedded Game - Iframe */
+            <div className="w-full flex justify-center bg-gradient-to-b from-slate-50 to-white p-4">
+              <div className="w-full max-w-[500px]">
+                <iframe
+                  src={game.iframe}
+                  width="100%"
+                  height={game.height}
+                  frameBorder="0"
+                  allowFullScreen
+                  className="rounded-lg shadow-lg border border-slate-200"
+                  style={{ maxWidth: '100%' }}
+                />
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
     </main>

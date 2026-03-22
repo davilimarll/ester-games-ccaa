@@ -9,6 +9,7 @@ export type Game = {
   category: string
   difficulty: string
   emoji: string
+  isExternal?: boolean  // Para jogos que abrem em nova aba
 }
 
 export type PageView = 'home' | 'games' | 'game'
