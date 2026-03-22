@@ -6,18 +6,11 @@ Plataforma de jogos educativos para aprendizado de inglês do CCAA, desenvolvida
 
 Ester Games é uma plataforma interativa de jogos educativos projetada para tornar o aprendizado de inglês mais divertido e eficaz para os alunos do CCAA.
 
-## 🎯 Jogos Disponíveis
+## 🎨 Cores do Tema
 
-| Jogo | Descrição | Dificuldade |
-|------|-----------|-------------|
-| Word Match | Combine palavras em inglês com traduções | Iniciante |
-| Listen & Choose | Ouça e escolha a imagem correta | Iniciante |
-| Grammar Quest | Complete frases com gramática correta | Intermediário |
-| Memory Game | Encontre pares de palavras | Iniciante |
-| Conversation Sim | Pratique diálogos do dia a dia | Intermediário |
-| Vocabulary Builder | Flashcards interativos | Todos |
-| Speed Quiz | Responda rápido às perguntas | Avançado |
-| Word Scramble | Desembaralhe letras para formar palavras | Iniciante |
+- **Azul CCAA** - Cor principal
+- **Branco** - Fundo e contraste
+- **Vermelho CCAA** - Acentos e destaques
 
 ## 🚀 Tecnologias
 

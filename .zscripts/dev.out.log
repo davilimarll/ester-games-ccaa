@@ -195,3 +195,19 @@ Use 'kill 658' to stop it.
  GET / 200 in 83ms (compile: 2ms, render: 81ms)
  GET / 200 in 66ms (compile: 3ms, render: 62ms)
  GET / 200 in 39ms (compile: 2ms, render: 37ms)
+ GET / 200 in 44ms (compile: 2ms, render: 42ms)
+ GET / 200 in 43ms (compile: 6ms, render: 38ms)
+ GET / 200 in 38ms (compile: 2ms, render: 35ms)
+ GET / 200 in 37ms (compile: 5ms, render: 32ms)
+ GET / 200 in 37ms (compile: 6ms, render: 31ms)
+✓ Compiled in 273ms
+ GET / 200 in 36ms (compile: 6ms, render: 30ms)
+ GET / 200 in 37ms (compile: 2ms, render: 34ms)
+ GET / 200 in 34ms (compile: 2ms, render: 32ms)
+✓ Compiled in 171ms
+ GET / 200 in 154ms (compile: 52ms, render: 102ms)
+✓ Compiled in 116ms
+ GET / 200 in 88ms (compile: 57ms, render: 31ms)
+⚠ Cross origin request detected from preview-chat-48429eff-c14d-4f70-ba85-8248b7aa3596.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 91ms (compile: 2ms, render: 88ms)
