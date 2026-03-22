@@ -12,5 +12,17 @@ export const games: Game[] = [
     category: "Vocabulário",
     difficulty: "Iniciante",
     emoji: "🥚"
+  },
+  {
+    id: 2,
+    title: "Easter Quiz 01",
+    description: "Quiz interativo sobre a Páscoa em inglês. Teste seus conhecimentos de forma divertida!",
+    iframe: "https://wordwall.net/pt/embed/8ed1fe63f5b941659ffbefcf00ce1136?themeId=1&templateId=5&fontStackId=0",
+    wordwallUrl: "https://wordwall.net/pt/resource/8ed1fe63f5b941659ffbefcf00ce1136",
+    width: 500,
+    height: 380,
+    category: "Quiz",
+    difficulty: "Iniciante",
+    emoji: "🐣"
   }
 ]
