@@ -10,6 +10,7 @@ export type Game = {
   difficulty: string
   emoji: string
   isQuiz?: boolean  // Para o quiz especial
+  isRpg?: boolean   // Para o RPG especial
 }
 
-export type PageView = 'home' | 'games' | 'game' | 'quiz'
+export type PageView = 'home' | 'games' | 'game' | 'quiz' | 'rpg'

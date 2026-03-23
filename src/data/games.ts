@@ -15,6 +15,19 @@ export const games: Game[] = [
     isQuiz: true
   },
   {
+    id: 100,
+    title: "The Quest for the Golden Cacao",
+    description: "RPG de fantasia interativo! Explore a floresta mágica da Páscoa e encontre o lendário Cacau Dourado. Tome decisões em inglês!",
+    iframe: "",
+    wordwallUrl: "",
+    width: 0,
+    height: 0,
+    category: "RPG Adventure",
+    difficulty: "Intermediário",
+    emoji: "🍫",
+    isRpg: true
+  },
+  {
     id: 1,
     title: "Board Game - Easter Vocabulary",
     description: "Jogo de tabuleiro com vocabulário de Páscoa em inglês. Clique e aprenda palavras divertidas!",

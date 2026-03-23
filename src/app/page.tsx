@@ -11,6 +11,7 @@ import { HomePage } from '@/components/pages/HomePage'
 import { GamesList } from '@/components/games/GamesList'
 import { GameView } from '@/components/games/GameView'
 import { EasterQuiz } from '@/components/games/EasterQuiz'
+import { GoldenCacaoRPG } from '@/components/games/GoldenCacaoRPG'
 import { games } from '@/data/games'
 import { PageView } from '@/types/games'
 
@@ -28,6 +29,10 @@ export default function Home() {
   const handleSelectGame = (gameId: number) => {
     if (gameId === 99) {
       setCurrentPage('quiz')
+      return
+    }
+    if (gameId === 100) {
+      setCurrentPage('rpg')
       return
     }
     setSelectedGameId(gameId)
@@ -66,6 +71,7 @@ export default function Home() {
           {currentPage === 'games' && <GamesList onNavigate={handleNavigate} onSelectGame={handleSelectGame} />}
           {currentPage === 'game' && selectedGame && <GameView game={selectedGame} onNavigate={handleNavigate} />}
           {currentPage === 'quiz' && <EasterQuiz onBack={() => handleNavigate('games')} />}
+          {currentPage === 'rpg' && <GoldenCacaoRPG onBack={() => handleNavigate('games')} />}
         </motion.div>
       </AnimatePresence>
 
