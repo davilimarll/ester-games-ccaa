@@ -62,5 +62,17 @@ export const games: Game[] = [
     category: "Vocabulário",
     difficulty: "Intermediário",
     emoji: "✏️"
+  },
+  {
+    id: 4,
+    title: "Easter Word",
+    description: "Jogo de palavras temático de Páscoa! Encontre e associe as palavras em inglês de forma interativa!",
+    iframe: "https://wordwall.net/embed/cbdb6c9dc8d84187b901ec8792f2ffe6?themeId=1&templateId=38&fontStackId=0",
+    wordwallUrl: "https://wordwall.net/resource/cbdb6c9dc8d84187b901ec8792f2ffe6",
+    width: 500,
+    height: 380,
+    category: "Vocabulário",
+    difficulty: "Iniciante",
+    emoji: "🔤"
   }
 ]
