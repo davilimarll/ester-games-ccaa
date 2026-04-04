@@ -74,5 +74,17 @@ export const games: Game[] = [
     category: "Vocabulário",
     difficulty: "Iniciante",
     emoji: "🔤"
+  },
+  {
+    id: 5,
+    title: "Easter Labyrinth",
+    description: "Labirinto temático de Páscoa para praticar inglês de forma divertida e interativa.",
+    iframe: "https://wordwall.net/pt/embed/2d10ad1458824b46aba1bc8b71d9b87f?themeId=23&templateId=49&fontStackId=0",
+    wordwallUrl: "https://wordwall.net/pt/embed/2d10ad1458824b46aba1bc8b71d9b87f?themeId=23&templateId=49&fontStackId=0",
+    width: 500,
+    height: 380,
+    category: "Vocabulário",
+    difficulty: "Iniciante",
+    emoji: "🧩"
   }
 ]
